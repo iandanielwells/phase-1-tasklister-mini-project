@@ -19,6 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const delBtn = document.createElement('button');
     delBtn.textContent = "Delete";
 
+    const priority = document.querySelector('#priority');
+
+    if (priority.value === 'High') {
+      newTask.classList.add('red')
+
+      } else if (priority.value === 'Medium') {
+        newTask.classList.add('green')
+        
+        } else {
+          newTask.classList.add('blue')}
+
+    //for priority,  
+
     delBtn.addEventListener('click', () => {
       newTask.remove();
     })
